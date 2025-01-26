@@ -19,15 +19,6 @@ public class EnemyMovement : MonoBehaviour
         {
             playerTransform = player.transform;
         }
-    }
-
-    void Update()
-    {
-        // Beweeg naar de positie van de speler als deze is gevonden
-        if (playerTransform != null)
-        {
-            Debug.Log("Check");
-            agent.SetDestination(playerTransform.position);
-        }
+        agent.SetDestination(playerTransform.position);
     }
 }
